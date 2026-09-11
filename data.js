@@ -18,12 +18,12 @@ Durante mi experiencia profesional he participado en proyectos para clientes del
 
 Además de mi experiencia corporativa, desarrollé de manera independiente nueve videojuegos para Android utilizando Unity y C#, participando en todo el ciclo de vida de los productos, desde el desarrollo hasta su publicación y mantenimiento.`,
     personalMessage: "Me gusta seguir aprendiendo y enfrentarme a retos que me permitan mejorar, crecer profesionalmente y ampliar mis conocimientos.",
-    cvDownloadUrl: "#", // Reemplazar con el enlace real del archivo PDF (ej. "assets/CV_Miguel_Chavez.pdf")
+    cvDownloadUrl: "https://dijammbs.github.io/PoM/Portafolio/CV/CV", // Link de descarga del CV en PDF
     socialLinks: {
-      linkedin: "https://linkedin.com/in/tu-perfil-placeholder", // Reemplazar con LinkedIn real
-      github: "https://github.com/tu-usuario-placeholder", // Reemplazar con GitHub real
-      googlePlay: "https://play.google.com/store/apps/developer?id=tu-desarrollador-placeholder", // Reemplazar con Google Play real
-      email: "mailto:tu-email-placeholder@correo.com" // Reemplazar con Email real
+      linkedin: "https://www.linkedin.com/in/mrchavezs/", // Link de LinkedIn
+      github: "https://github.com/tu-usuario-placeholder", // Link de GitHub
+      googlePlay: "https://play.google.com/store/apps/developer?id=tu-desarrollador-placeholder", // Link de Google Play
+      email: "miguelchavez250316@gmail.com" // Link de correo electrónico
     }
   },
   stats: [
