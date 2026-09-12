@@ -18,7 +18,7 @@ Durante mi experiencia profesional he participado en proyectos para clientes del
 
 Además de mi experiencia corporativa, desarrollé de manera independiente nueve videojuegos para Android utilizando Unity y C#, participando en todo el ciclo de vida de los productos, desde el desarrollo hasta su publicación y mantenimiento.`,
     personalMessage: "Me gusta seguir aprendiendo y enfrentarme a retos que me permitan mejorar, crecer profesionalmente y ampliar mis conocimientos.",
-    cvDownloadUrl: "https://dijammbs.github.io/PoM/Portafolio/CV/CV", // Link de descarga del CV en PDF
+    cvDownloadUrl: "https://github.com/DIJAMMBS/PoM/tree/main/CV/CV.pdf", // Link de descarga del CV en PDF
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/mrchavezs/", // Link de LinkedIn
       github: "https://github.com/tu-usuario-placeholder", // Link de GitHub
