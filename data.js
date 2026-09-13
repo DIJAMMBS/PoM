@@ -23,7 +23,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       linkedin: "https://www.linkedin.com/in/mrchavezs/", // Link de LinkedIn
       github: "https://github.com/tu-usuario-placeholder", // Link de GitHub
       googlePlay: "https://play.google.com/store/apps/developer?id=tu-desarrollador-placeholder", // Link de Google Play
-      email: "miguelchavez250316@gmail.com" // Link de correo electrónico
+      email: "mailto:miguelchavez250316@gmail.com" // Link de correo electrónico
     }
   },
   stats: [
@@ -45,7 +45,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       ],
       projects: [
         {
-          title: "Obsolescencia SCCC — Santander",
+          title: "Obsolescencia SCCC",
           category: "Modernización tecnológica / Backend",
           description: "Participé en la migración de aplicaciones empresariales de Java 8 a Java 17 como parte de un proyecto de modernización tecnológica.",
           responsibilities: [
@@ -55,10 +55,10 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
             "Corrección y adaptación de pruebas unitarias.",
             "Validación funcional y técnica durante la migración."
           ],
-          technologies: ["Java", "Maven", "Shell Script", "Git", "Mockito", "Eclipse", "Visual Studio Code"]
+          technologies: ["Java", "Maven", "Nexus", "Shell Script", "Git", "Mockito", "Eclipse", "Visual Studio Code"]
         },
         {
-          title: "Gravity — Migración Mainframe a la Nube — Santander",
+          title: "Gravity — Migración Mainframe a la Nube",
           category: "Mainframe / Cloud Migration / Batch",
           description: "Participé en el monitoreo y administración de procesos Batch durante la migración del Mainframe hacia la plataforma Gravity Cloud.",
           responsibilities: [
@@ -72,7 +72,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
           technologies: ["Control-M", "JCL", "COBOL", "CICS", "Mainframe"]
         },
         {
-          title: "BEX de Clients — BBVA",
+          title: "BEX de Clients",
           category: "Application Support / Mainframe",
           description: "Brindé soporte a aplicaciones críticas relacionadas con la operación de clientes BBVA.",
           responsibilities: [
@@ -85,7 +85,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
           technologies: ["JCL", "COBOL", "CICS", "Mainframe", "IDZ", "XINFO"]
         },
         {
-          title: "Desacople Batch — Fondos de Inversión — Santander",
+          title: "Desacople Batch — Fondos de Inversión",
           category: "Backend / Microservices",
           description: "Desarrollé un microservicio REST para la consulta de precios de productos financieros utilizando Spring Boot.",
           responsibilities: [
@@ -97,7 +97,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
           technologies: ["Spring Boot", "REST API", "Bruno"]
         },
         {
-          title: "Certificación Anual — Secretaría de Finanzas CDMX — Santander",
+          title: "Certificación Anual — Secretaría de Finanzas CDMX",
           category: "Automation / Database",
           description: "Desarrollé un script Shell para automatizar la depuración de registros obsoletos en bases de datos.",
           responsibilities: [
@@ -107,10 +107,10 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
             "Validación utilizando Cygwin.",
             "Automatización de tareas de mantenimiento."
           ],
-          technologies: ["Shell Script", "PL/SQL", "Cygwin", "MobaXterm"]
+          technologies: ["Shell Script", "PL/SQL", "Cygwin", "MobaXterm", "Virtualización"]
         },
         {
-          title: "JCLs Huérfanos y Análisis TRX PB19 — Santander",
+          title: "JCLs Huérfanos y Análisis TRX PB19",
           category: "Mainframe / Batch",
           description: "Analicé incidencias relacionadas con procesos JCL y transacciones Mainframe.",
           responsibilities: [
@@ -122,18 +122,18 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
           technologies: ["JCL", "COBOL", "CICS", "Mainframe"]
         },
         {
-          title: "FS-BS Workday — Indra Sistemas",
+          title: "FS-BS Workday",
           category: "Automation",
           description: "Desarrollé scripts Shell para automatizar la transferencia de archivos entre servidores y facilitar la búsqueda y recuperación automatizada de archivos.",
           responsibilities: [
             "Desarrollo de scripts Shell para automatización.",
             "Configuración y prueba de transferencias seguras entre servidores Linux y Windows.",
-            "Búsqueda y recuperación automatizada de información en base a patrones definidos."
+            "Búsqueda y recuperación automatizada de información basado en patrones definidos."
           ],
-          technologies: ["Shell Script", "Linux", "Cygwin", "MobaXterm"]
+          technologies: ["Shell Script", "Linux", "Cygwin", "MobaXterm", "Virtualización"]
         },
         {
-          title: "Transformación de Procesos de Nómina — Indra Sistemas",
+          title: "Transformación de Procesos de Nómina",
           category: "Automation",
           description: "Desarrollé scripts Shell para automatizar procesos internos relacionados con la operación de nómina.",
           responsibilities: [
@@ -141,7 +141,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
             "Validación de procesamiento seguro de datos.",
             "Optimización de scripts en entornos UNIX/Linux."
           ],
-          technologies: ["Shell Script", "Linux", "Cygwin", "MobaXterm"]
+          technologies: ["Shell Script", "Linux", "Cygwin", "MobaXterm", "Virtualización"]
         }
       ]
     },
@@ -157,9 +157,9 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
   games: [
     {
       title: "Tank-Pang",
-      type: "Arcade 2D",
-      shortDescription: "Arcade 2D basado en puntuación, con enemigos de múltiples fases, power-ups y dificultad progresiva.",
-      technologies: ["Unity", "C#", "2D Physics", "Google Play Services"],
+      type: "Arcade 2.5D",
+      shortDescription: "Arcade 2.5D basado en puntuación, con enemigos de múltiples fases, power-ups y dificultad progresiva.",
+      technologies: ["Unity", "C#", "2D/3D Physics", "Google Play Services"],
       storeUrl: "#", // Placeholder
       colorTheme: "#0ea5e9" // Cyan theme
     },
@@ -190,7 +190,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
     {
       title: "Digging Dog",
       type: "Endless Runner",
-      shortDescription: "Endless Runner 2D con generación dinámica de obstáculos y sistema de supervivencia.",
+      shortDescription: "Endless Runner 2.5D con generación dinámica de obstáculos y sistema de supervivencia.",
       technologies: ["Unity", "C#", "Dynamic Generation", "Score System"],
       storeUrl: "#",
       colorTheme: "#ef4444" // Red theme
@@ -230,19 +230,23 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
   ],
   skills: {
     lenguajes: ["Java", "C#", "C++", "JavaScript", "Kotlin", "COBOL", "JCL", "Python", "Shell Script"],
-    backendDev: ["Spring Boot", "Maven", "Git", "REST API", "Mockito", "Eclipse", "NetBeans", "Visual Studio", "Visual Studio Code", "Spring Tool Suite"],
+    backendDev: ["Spring Boot", "Maven", "Nexus", "Git", "REST API", "Mockito", "Eclipse", "NetBeans", "Visual Studio", "Visual Studio Code", "Spring Tool Suite"],
     mainframe: ["CICS", "JCL", "COBOL", "Control-M", "ESCWA", "XINFO", "IDZ", "Mainframe 390"],
     sistemas: ["Linux", "UNIX", "Windows"],
     tools: ["Cygwin", "MobaXterm", "ServiceNow", "Bruno"],
     gameDev: ["Unity", "C#", "Android Studio", "Google Play Console", "Google Play Services", "Google AdMob"],
-    creative3d: ["Blender", "SketchUp", "Photoshop", "Illustrator", "FL Studio", "Filmora"]
+    creative3d: ["Blender", "SketchUp", "Photoshop", "Illustrator", "FL Studio", "Filmora"],
+    virtualizacion: ["VMware", "VirtualBox"]
   },
   techStackSection: {
     backend: ["Java", "Spring Boot", "Maven", "REST", "Mockito"],
     mainframe: ["COBOL", "JCL", "CICS", "Control-M", "IDZ", "XINFO"],
-    automation: ["Shell Script", "Linux", "PL/SQL", "Cygwin"],
-    gameDev: ["Unity", "C#", "Android", "Google Play"],
-    tools: ["Git", "Eclipse", "VS Code", "ServiceNow", "Bruno"]
+    automation: ["Shell Script", "Linux", "PL/SQL", "Cygwin", "MobaXterm"],
+    gameDev: ["Unity", "C#", "Android Studio", "Google Play", "Google Play Console", "Google Play Services", "Google AdMob"],
+    tools: ["Git", "Eclipse", "VS Code", "ServiceNow", "Bruno"],
+    virtualization: ["VMware", "VirtualBox"],
+    modeling3d: ["Blender", "Google SketchUp"],
+    imageEditing: ["Photoshop", "Illustrator"]
   },
   education: {
     degree: "Ingeniería Informática",
