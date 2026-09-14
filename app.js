@@ -44,7 +44,7 @@ function initTheme() {
       document.body.classList.add('light-theme');
       localStorage.setItem('theme', 'light');
     }
-    
+
     // Dispatch custom event to let canvas redraw in corresponding colors
     window.dispatchEvent(new CustomEvent('theme-changed'));
   });
@@ -132,7 +132,7 @@ function initDynamicContent() {
   setLinkAttributes('contact-github', ghUrl);
   setLinkAttributes('contact-googleplay', gpUrl);
   setLinkAttributes('contact-email', emailUrl);
-  
+
   if (emailUrl) {
     const emailTxt = emailUrl.replace('mailto:', '');
     const emailEl = document.getElementById('contact-email-text');
@@ -218,13 +218,13 @@ function initDynamicContent() {
     const timelineItems = data.experience.map(exp => {
       const isGameDev = exp.isGameDev === true;
       const techBadges = exp.technologies.map(t => `<span class="tag-badge">${t}</span>`).join('');
-      
+
       let projectsAccordionHtml = '';
       if (exp.projects && exp.projects.length > 0) {
         const projectsList = exp.projects.map((proj, idx) => {
           const respList = proj.responsibilities.map(r => `<li>${r}</li>`).join('');
           const innerTags = proj.technologies.map(t => `<span class="project-inner-tag">${t}</span>`).join('');
-          
+
           return `
             <div class="project-accordion-card" data-project-id="proj-${idx}">
               <div class="project-accordion-trigger">
@@ -316,7 +316,7 @@ function initDynamicContent() {
 
     const gamesHtml = data.games.map(game => {
       const techTags = game.technologies.map(t => `<span class="game-tech-tag">${t}</span>`).join('');
-      
+
       // Inline visual customization using hex codes
       return `
         <div class="game-card reveal-fade" style="--card-glow: ${hexToRgbString(game.colorTheme)}">
@@ -428,7 +428,7 @@ function initDynamicContent() {
         </li>
       `;
     }).join('');
-    
+
     certsList.innerHTML = certsHtml;
   }
 }
@@ -467,12 +467,12 @@ function hexToRgbString(hex) {
    ========================================================================== */
 function initAccordion() {
   const triggers = document.querySelectorAll('.project-accordion-trigger');
-  
+
   triggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
       const card = trigger.parentElement;
       const content = card.querySelector('.project-accordion-content');
-      
+
       // Close other accordions in the same section for grid readability
       const siblingCards = card.parentElement.querySelectorAll('.project-accordion-card');
       siblingCards.forEach(sibling => {
@@ -484,7 +484,7 @@ function initAccordion() {
 
       // Toggle current accordion
       const isExpanded = card.classList.toggle('expanded');
-      
+
       if (isExpanded) {
         // Animate content height
         content.style.maxHeight = content.scrollHeight + 'px';
@@ -508,9 +508,9 @@ function initCertsToggle() {
 
   toggleBtn.addEventListener('click', () => {
     isExpanded = !isExpanded;
-    
+
     toggleBtn.classList.toggle('expanded', isExpanded);
-    
+
     hiddenCerts.forEach(cert => {
       if (isExpanded) {
         cert.classList.add('reveal');
@@ -521,8 +521,8 @@ function initCertsToggle() {
 
     const btnText = toggleBtn.querySelector('span');
     if (btnText) {
-      btnText.textContent = isExpanded 
-        ? "Mostrar menos certificaciones" 
+      btnText.textContent = isExpanded
+        ? "Mostrar menos certificaciones"
         : "Ver todas las certificaciones";
     }
 
@@ -539,7 +539,7 @@ function initCertsToggle() {
 function initScrollAnimations() {
   // A. Scroll Animations Reveal
   const animatedElements = document.querySelectorAll('.reveal-fade, .reveal-slide-left, .reveal-slide-right');
-  
+
   const revealCallback = (entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -566,7 +566,7 @@ function initScrollAnimations() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-        
+
         // Update Desktop Navbar
         navLinks.forEach(link => {
           link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
@@ -602,13 +602,13 @@ function initHeroCanvas() {
   let particles = [];
   const particleCount = 65;
   const maxDistance = 120;
-  
+
   // Set dimensions
   const resizeCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   };
-  
+
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
 
@@ -626,14 +626,14 @@ function initHeroCanvas() {
       connectionColor = 'rgba(139, 92, 246, '; // Violet glow
     }
   };
-  
+
   // Listen for custom theme change events
   window.addEventListener('theme-changed', updateColors);
   updateColors();
 
   // Mouse interaction
   let mouse = { x: null, y: null, radius: 150 };
-  
+
   window.addEventListener('mousemove', (e) => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
@@ -671,7 +671,7 @@ function initHeroCanvas() {
         const dx = mouse.x - this.x;
         const dy = mouse.y - this.y;
         const distance = Math.hypot(dx, dy);
-        
+
         if (distance < mouse.radius) {
           const force = (mouse.radius - distance) / mouse.radius;
           const angle = Math.atan2(dy, dx);
@@ -708,12 +708,12 @@ function initHeroCanvas() {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          
+
           // Gradient connection color lines (Cyan to Violet)
           const grad = ctx.createLinearGradient(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
           grad.addColorStop(0, particleColor + opacity + ')');
           grad.addColorStop(1, connectionColor + opacity + ')');
-          
+
           ctx.strokeStyle = grad;
           ctx.lineWidth = 1;
           ctx.stroke();
@@ -725,17 +725,17 @@ function initHeroCanvas() {
   // Main Loop
   const animate = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+
     particles.forEach(p => {
       p.update();
       p.draw();
     });
-    
+
     connect();
-    
+
     animationFrameId = requestAnimationFrame(animate);
   };
-  
+
   animate();
 
   // Cleanup references on reload
@@ -753,7 +753,7 @@ function initContactForm() {
 
   if (!form || !statusMessage) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = document.getElementById('form-name').value.trim();
@@ -772,25 +772,71 @@ function initContactForm() {
       return;
     }
 
-    // Success Simulation
     submitBtn.disabled = true;
+
     const btnText = submitBtn.querySelector('span');
     const originalText = btnText.textContent;
     btnText.textContent = "Enviando...";
 
-    setTimeout(() => {
-      showStatus('¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.', 'success');
+    try {
+      const formData = new FormData(form);
+      const formDataObject = Object.fromEntries(formData.entries());
+      const response = await fetch(
+        'https://formsubmit.co/ajax/miguelchavez250316@gmail.com',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(formDataObject)
+        }
+      );
+
+      // Leer la respuesta real de FormSubmit
+      const data = await response.json();
+
+      console.log('Respuesta de FormSubmit:', data);
+
+      // Verificar si hubo un error HTTP
+      if (!response.ok) {
+        throw new Error(
+          data?.message || 'FormSubmit rechazó el envío'
+        );
+      }
+
+      // Verificar si FormSubmit indica explícitamente un error
+      if (data?.success === false) {
+        throw new Error(
+          data?.message || 'FormSubmit no aceptó el envío'
+        );
+      }
+
+      // Si llegamos aquí, FormSubmit aceptó la solicitud
+      showStatus(
+        '¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.',
+        'success'
+      );
+
       form.reset();
-      submitBtn.disabled = false;
-      btnText.textContent = originalText;
-    }, 1500);
+
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+
+      showStatus(
+        'No se pudo enviar el mensaje. Por favor, inténtalo nuevamente.',
+        'error'
+      );
+    }
+
+    submitBtn.disabled = false;
+    btnText.textContent = originalText;
   });
 
   const showStatus = (msg, type) => {
     statusMessage.textContent = msg;
     statusMessage.className = `form-status ${type}`;
-    
-    // Clear error messages automatically after 5 seconds
+
     if (type === 'error') {
       setTimeout(() => {
         statusMessage.textContent = '';
