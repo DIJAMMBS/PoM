@@ -131,7 +131,9 @@ function initDynamicContent() {
   setLinkAttributes('contact-linkedin', liUrl);
   setLinkAttributes('contact-github', ghUrl);
   setLinkAttributes('contact-googleplay', gpUrl);
-  setLinkAttributes('contact-email', emailUrl);
+  setLinkAttributes('contact-email', 'https://mail.google.com/mail/?view=cm&fs=1&to=miguelchavez250316@gmail.com');
+
+  document.getElementById('contact-email').setAttribute('target', '_blank');
 
   if (emailUrl) {
     const emailTxt = emailUrl.replace('mailto:', '');
