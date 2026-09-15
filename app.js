@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMobileMenu();
   initDynamicContent();
+  initCertificateModal();
   initAccordion();
   initCertsToggle();
   initScrollAnimations();
@@ -415,14 +416,47 @@ function initDynamicContent() {
     `).join('');
   }
 
-  // J. CERTIFICATIONS LIST
+  // Lista de certificaciones
   const certsList = document.getElementById('certifications-list-render');
   if (certsList) {
     const certsHtml = data.certifications.map((cert, index) => {
-      const isHidden = index >= 5; // Hide certs beyond index 4 (show 5 initially)
+      const isHidden = index >= 5;
+
+      const titleHtml = cert.certificate
+        ? `
+          <button
+            type="button"
+            class="cert-title cert-link"
+            data-certificate="${cert.certificate}"
+            data-cert-title="${cert.title}"
+            aria-label="Ver certificado: ${cert.title}"
+          >
+
+            <span class="cert-link-text">${cert.title}</span>
+
+            <span class="cert-link-icon" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="8" y1="13" x2="16" y2="13"></line>
+                <line x1="8" y1="17" x2="14" y2="17"></line>
+              </svg>
+            </span>
+          </button>
+        `
+        : `<h4 class="cert-title">${cert.title}</h4>`;
+
       return `
         <li class="cert-item ${isHidden ? 'hidden-cert' : ''}">
-          <h4 class="cert-title">${cert.title}</h4>
+          ${titleHtml}
           <div class="cert-meta">
             <span class="cert-issuer">${cert.issuer}</span>
             <span class="cert-date font-mono">${cert.date}</span>
@@ -494,6 +528,80 @@ function initAccordion() {
         content.style.maxHeight = '0px';
       }
     });
+  });
+}
+
+/* ==========================================================================
+   CERTIFICATE MODAL
+   ========================================================================== */
+function initCertificateModal() {
+  const modal = document.getElementById('certificate-modal');
+  const overlay = modal?.querySelector('.certificate-modal-overlay');
+  const closeBtn = document.getElementById('certificate-modal-close');
+  const title = document.getElementById('certificate-modal-title');
+  const pdf = document.getElementById('certificate-modal-pdf');
+  const certsList = document.getElementById('certifications-list-render');
+
+  if (!modal || !overlay || !closeBtn || !title || !pdf || !certsList) return;
+
+  let lastFocusedElement = null;
+
+  const openModal = (button) => {
+    const certificate = button.dataset.certificate;
+    const certTitle = button.dataset.certTitle;
+
+    if (!certificate) return;
+
+    lastFocusedElement = document.activeElement;
+
+    title.textContent = certTitle || 'Certificado';
+    pdf.src = certificate;
+
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('overflow-hidden');
+
+    closeBtn.focus();
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+
+    // Liberamos el PDF al cerrar
+    pdf.src = '';
+
+    document.body.classList.remove('overflow-hidden');
+
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+      lastFocusedElement = null;
+    }
+  };
+
+  // Detecta los certificados que tienen archivo asociado
+  certsList.addEventListener('click', (event) => {
+    const button = event.target.closest('.cert-link');
+
+    if (!button) return;
+
+    openModal(button);
+  });
+
+  // Botón X
+  closeBtn.addEventListener('click', closeModal);
+
+  // Clic fuera de la ventana
+  overlay.addEventListener('click', closeModal);
+
+  // Tecla ESC
+  document.addEventListener('keydown', (event) => {
+    if (
+      event.key === 'Escape' &&
+      modal.classList.contains('active')
+    ) {
+      closeModal();
+    }
   });
 }
 

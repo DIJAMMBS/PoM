@@ -160,7 +160,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       type: "Arcade 2.5D",
       shortDescription: "Arcade 2.5D basado en puntuación, con enemigos de múltiples fases, power-ups y dificultad progresiva.",
       technologies: ["Unity", "C#", "2D/3D Physics", "Google Play Services"],
-      storeUrl: "#", // Placeholder
+      storeUrl: "PaginaEnMantenimiento.html", // Link De Tank-Pang En La Play Store
       colorTheme: "#0ea5e9" // Cyan theme
     },
     {
@@ -256,8 +256,8 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
     period: "2016 – 2021"
   },
   certifications: [
-    { title: "Certificación Mainframe Host", issuer: "MainWare", date: "Octubre 2025" },
-    { title: "Scrum Master Professional Certificate", issuer: "International Scrum Institute", date: "Octubre 2023" },
+    { title: "Mainframe Host", issuer: "MainWare", date: "Octubre 2025", certificate: "Certificaciones/Host.pdf" },
+    { title: "Scrum Master Professional Certificate", issuer: "International Scrum Institute", date: "Octubre 2023", certificate: "Certificaciones/ScrumMaster.pdf" },
     { title: "Complete Agile Scrum Master Certification Training", issuer: "International Scrum Institute", date: "Octubre 2023" },
     { title: "Scrum & Agile: Aprende y Profundiza las Metodologías Ágiles", issuer: "International Scrum Institute", date: "Octubre 2023" },
     { title: "Jenkins, de Cero a Experto: Conviértete en un Jenkins Master", issuer: "Udemy", date: "Julio 2025" },

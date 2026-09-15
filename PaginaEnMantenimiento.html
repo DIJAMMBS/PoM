@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página en Mantenimiento</title>
+    <style>
+        /* =========================================
+           CONFIGURACIÓN GENERAL
+        ========================================= */
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #ffffff 0%,
+                    #f8fafc 55%,
+                    #eef2f7 100%
+                );
+
+            color: #333;
+        }
+        /* =========================================
+           CONTENEDOR PRINCIPAL
+        ========================================= */
+        .maintenance-container {
+            width: 100%;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            padding: 30px 20px;
+
+            animation: aparecer 1s ease-out;
+        }
+        /* =========================================
+           EFECTO DE LUZ DE FONDO
+        ========================================= */
+        .background-glow {
+            position: absolute;
+
+            width: 450px;
+            height: 450px;
+
+            border-radius: 50%;
+
+            background: rgba(14, 165, 233, 0.08);
+
+            filter: blur(50px);
+
+            z-index: 0;
+
+            animation: respirar 6s ease-in-out infinite;
+        }
+        /* =========================================
+           ILUSTRACIÓN
+        ========================================= */
+        .maintenance-image {
+            position: relative;
+
+            z-index: 2;
+
+            width: 60%;
+            max-width: 600px;
+
+            height: auto;
+
+            object-fit: contain;
+
+            /*
+             * Movimiento suave de flotación
+             */
+            animation:
+                flotar 4s ease-in-out infinite,
+                aparecerImagen 1.2s ease-out;
+
+            /*
+             * Evita que la imagen se vuelva
+             * demasiado grande en pantallas pequeñas
+             */
+            min-width: 280px;
+        }
+        /* =========================================
+           TEXTO
+        ========================================= */
+        .maintenance-message {
+            position: relative;
+
+            z-index: 3;
+
+            margin-top: 5px;
+
+            text-align: center;
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+            letter-spacing: 0.3px;
+
+            color: #64748b;
+
+            animation: aparecerTexto 1.5s ease-out;
+        }
+        /* =========================================
+           PUNTOS ANIMADOS
+        ========================================= */
+        .dots::after {
+            content: "";
+
+            animation: puntos 1.5s steps(4, end) infinite;
+        }
+        /* =========================================
+           ANIMACIONES
+        ========================================= */
+        /*
+         * La ilustración sube y baja ligeramente
+         */
+        @keyframes flotar {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        /*
+         * Aparición inicial de la imagen
+         */
+        @keyframes aparecerImagen {
+
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        /*
+         * Aparición general de la página
+         */
+        @keyframes aparecer {
+
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        /*
+         * Aparición del texto
+         */
+        @keyframes aparecerTexto {
+
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /*
+         * Efecto de respiración del fondo
+         */
+        @keyframes respirar {
+
+            0%,
+            100% {
+                transform: scale(0.9);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+        /*
+         * Animación de los tres puntos
+         */
+        @keyframes puntos {
+
+            0% {
+                content: "";
+            }
+
+            25% {
+                content: ".";
+            }
+
+            50% {
+                content: "..";
+            }
+
+            75% {
+                content: "...";
+            }
+
+            100% {
+                content: "";
+            }
+        }
+        /* =========================================
+           RESPONSIVE - TABLETS
+        ========================================= */
+        @media (max-width: 900px) {
+
+            .maintenance-image {
+                width: 75%;
+                max-width: 700px;
+            }
+
+            .maintenance-message {
+                font-size: 18px;
+            }
+        }
+        /* =========================================
+           RESPONSIVE - CELULARES
+        ========================================= */
+        @media (max-width: 600px) {
+
+            .maintenance-container {
+                padding: 20px 15px;
+            }
+
+            .maintenance-image {
+                width: 95%;
+                max-width: 500px;
+
+                min-width: 0;
+            }
+
+            .maintenance-message {
+                margin-top: 5px;
+
+                font-size: 16px;
+            }
+
+            .background-glow {
+                width: 280px;
+                height: 280px;
+            }
+        }
+        /* =========================================
+           REDUCIR ANIMACIONES SI EL USUARIO
+           TIENE ESA PREFERENCIA EN SU SISTEMA
+        ========================================= */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- =========================================
+         CONTENEDOR PRINCIPAL
+    ========================================== -->
+    <main class="maintenance-container">
+        <!-- Luz ambiental de fondo -->
+        <div class="background-glow"></div>
+        <!-- =====================================
+             IMAGEN DE MANTENIMIENTO
+        ====================================== -->
+        <img
+            class="maintenance-image"
+            src="Imagenes/DIJAMMBS - Mantenimiento.png"
+            alt="Página en mantenimiento"
+        >
+        <!-- =====================================
+             MENSAJE
+        ====================================== -->
+        <div class="maintenance-message">
+            Página en Mantenimiento<span class="dots"></span>
+        </div>
+    </main>
+</body>
+</html>

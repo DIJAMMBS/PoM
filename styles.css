@@ -1577,7 +1577,7 @@ body.light-theme .terminal-mockup {
 
 .cert-title {
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 400;  /* Grosor De Las Letras Cuadno No Hay Certificado */
   color: var(--text-primary);
   margin-bottom: 4px;
   line-height: 1.4;
@@ -1992,5 +1992,237 @@ textarea.form-control ~ .form-label {
   
   .contact-form-panel {
     padding: 24px;
+  }
+}
+
+/* ==========================================================================
+   CERTIFICATE MODAL
+   ========================================================================== */
+
+.certificate-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.certificate-modal.active {
+  display: flex;
+}
+
+.certificate-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.certificate-modal-content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1000px);
+  height: min(90vh, 800px);
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: certificateModalIn 0.25s ease-out;
+}
+
+@keyframes certificateModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Header */
+
+.certificate-modal-header {
+  position: relative;
+  flex-shrink: 0;
+  padding: 1.25rem 4rem 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.certificate-modal-header h3 {
+  margin: 0.25rem 0 0;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+/* Botón cerrar */
+
+.certificate-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  z-index: 2;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+
+  background: var(--bg-alt);
+  color: var(--text-primary);
+
+  font-size: 1.75rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.certificate-modal-close:hover {
+  background: var(--accent-cyan);
+  color: #000;
+  transform: rotate(90deg);
+}
+
+.certificate-modal-close:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+}
+
+/* Área del PDF */
+
+.certificate-modal-body {
+  flex: 1;
+  min-height: 0;
+  background: #525659;
+}
+
+.certificate-modal-body iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ==========================================================================
+   CERTIFICACIONES CON PDF
+   ========================================================================== */
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  width: 92%;                      /* Estas 2 linea ajustan el Icono De Las Certificaciones */
+  justify-content: space-between;         /* Para que el Icono de PDF se Vea a la Derecha */
+  gap: 0.55rem;
+
+  padding: 0;
+  border: 0;
+  background: none;
+
+  font: inherit;
+  font-weight: 700; /* Grosor De Las letras Cuando Hay Certificado */
+  color: inherit;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.cert-link:hover {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.cert-link:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Icono que indica que existe un certificado */
+
+.cert-link-icon {
+  width: 18px;
+  height: 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--accent-cyan);
+  opacity: 0.8;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.cert-link-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cert-link:hover .cert-link-icon {
+  opacity: 1;
+  transform: translateY(-1px) scale(1.08);
+}
+
+.cert-link-text {
+  display: inline;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  .certificate-modal {
+    padding: 0.75rem;
+  }
+
+  .certificate-modal-content {
+    width: 100%;
+    height: 92vh;
+    border-radius: 12px;
+  }
+
+  .certificate-modal-header {
+    padding: 1rem 3.5rem 0.85rem 1rem;
+  }
+
+  .certificate-modal-header h3 {
+    font-size: 1rem;
+  }
+
+  .certificate-modal-close {
+    top: 0.6rem;
+    right: 0.65rem;
+    width: 36px;
+    height: 36px;
   }
 }
