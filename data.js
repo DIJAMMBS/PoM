@@ -22,7 +22,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/mrchavezs/", // Link de LinkedIn
       github: "https://github.com/tu-usuario-placeholder", // Link de GitHub
-      googlePlay: "https://play.google.com/store/apps/developer?id=tu-desarrollador-placeholder", // Link de Google Play
+      googlePlay: "PaginaEnMantenimiento.html", // Link de Google Play
       email: "mailto:miguelchavez250316@gmail.com" // Link de correo electrónico
     }
   },
@@ -168,7 +168,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       type: "Aventura 2.5D",
       shortDescription: "Videojuego de aventura que combina escenarios 2D y 3D con narrativa, exploración y progresión por niveles.",
       technologies: ["Unity", "C#", "Cinemachine", "Level Design"],
-      storeUrl: "#",
+      storeUrl: "PaginaEnMantenimiento.html", // Link De Bit-Man En La Play Store
       colorTheme: "#8b5cf6" // Violet theme
     },
     {
@@ -176,7 +176,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       type: "Exploración 3D",
       shortDescription: "Videojuego 3D de exploración y resolución de laberintos, con selección de personajes, vehículos personalizados e interacción dinámica.",
       technologies: ["Unity", "C#", "3D Navigation", "Custom Vehicles"],
-      storeUrl: "#",
+      storeUrl: "PaginaEnMantenimiento.html", // Link De Xtreme Maze En La Play Store
       colorTheme: "#10b981" // Emerald theme
     },
     {
@@ -184,7 +184,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       type: "Arcade Clásico",
       shortDescription: "Videojuego arcade inspirado en el género Brick Breaker, con sistema de puntuación y progresión.",
       technologies: ["Unity", "C#", "2D Collision", "UI Animation"],
-      storeUrl: "#",
+      storeUrl: "PaginaEnMantenimiento.html", // Link De Breaking Blocks En La Play Store
       colorTheme: "#f59e0b" // Amber theme
     },
     {
@@ -192,7 +192,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       type: "Endless Runner",
       shortDescription: "Endless Runner 2.5D con generación dinámica de obstáculos y sistema de supervivencia.",
       technologies: ["Unity", "C#", "Dynamic Generation", "Score System"],
-      storeUrl: "#",
+      storeUrl: "PaginaEnMantenimiento.html", // Link De Digging Dog En La Play Store
       colorTheme: "#ef4444" // Red theme
     },
     {
@@ -200,7 +200,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       type: "Supervivencia 3D",
       shortDescription: "Videojuego 3D de exploración y supervivencia con inteligencia artificial del enemigo, administración de recursos y sistema de recolección de objetivos.",
       technologies: ["Unity", "C#", "NavMesh AI", "Resource Management", "3D Assets"],
-      storeUrl: "#",
+      storeUrl: "PaginaEnMantenimiento.html", // Link De Arachne En La Play Store
       colorTheme: "#ec4899" // Pink theme
     },
     {
@@ -208,7 +208,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       type: "Puzzle",
       shortDescription: "Videojuego Puzzle basado en colocación estratégica de piezas y sistema de puntuación.",
       technologies: ["Unity", "C#", "Grid Systems", "Logic Programming"],
-      storeUrl: "#",
+      storeUrl: "PaginaEnMantenimiento.html", // Link De Little Blocks En La Play Store
       colorTheme: "#06b6d4" // Electric blue theme
     },
     {
@@ -216,7 +216,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       type: "Plataformas 2D",
       shortDescription: "Videojuego de plataformas 2D con mecánicas clásicas de desplazamiento lateral.",
       technologies: ["Unity", "C#", "Tilemap", "2D Controller"],
-      storeUrl: "#",
+      storeUrl: "PaginaEnMantenimiento.html", // Link De Tec Street En La Play Store
       colorTheme: "#6366f1" // Indigo theme
     },
     {
@@ -224,7 +224,7 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
       type: "Casual",
       shortDescription: "Videojuego casual basado en mecánicas tipo Flappy Bird con temática urbana.",
       technologies: ["Unity", "C#", "Simple Controls", "Parallax Scrolling"],
-      storeUrl: "#",
+      storeUrl: "PaginaEnMantenimiento.html", // Link De Fly-Hop En La Play Store
       colorTheme: "#a855f7" // Purple theme
     }
   ],
