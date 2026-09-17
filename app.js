@@ -117,7 +117,7 @@ function initDynamicContent() {
     if (cvUrl === '#') {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        alert('El archivo CV PDF estará disponible próximamente en este espacio.');
+        alert('No Fue Posible Descargar El CV. Por Favor Intente Más Tarde.');
       });
       return;
     }

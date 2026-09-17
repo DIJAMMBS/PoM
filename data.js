@@ -230,11 +230,11 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
   ],
   skills: {
     lenguajes: ["Java", "C#", "C++", "JavaScript", "Kotlin", "COBOL", "JCL", "Python", "Shell Script"],
-    backendDev: ["Spring Boot", "Maven", "Nexus", "Git", "REST API", "Mockito", "Eclipse", "NetBeans", "Visual Studio", "Visual Studio Code", "Spring Tool Suite", "PL/SQL", "ETL", "Pipeline", "Node.js",],
+    backendDev: ["Spring Boot", "Maven", "Nexus", "Git", "REST API", "Mockito", "Eclipse", "NetBeans", "Visual Studio", "Visual Studio Code", "Spring Tool Suite", "ETL", "Pipeline", "Node.js",],
     mainframe: ["CICS", "JCL", "COBOL", "Control-M", "ESCWA", "XINFO", "IDZ", "Mainframe 390"],
     sistemas: ["Linux", "UNIX", "Windows", "MacOS"],
     tools: ["Cygwin", "MobaXterm", "ServiceNow", "Bruno", "Postman", "AntiGravity", "Formsubmit"],
-    basesDeDatos: ["Oracle", "SQL Server", "SQL Developer", "MongoDB"],
+    basesDeDatos: ["Oracle", "SQL Server", "SQL Developer", "PL/SQL", "MongoDB"],
     gameDev: ["Unity", "C#", "Android Studio", "Google Play Console", "Google Play Services", "Google AdMob"],
     creative3d: ["Blender", "SketchUp", "Photoshop", "Illustrator", "FL Studio", "Filmora"],
     virtualizacion: ["VMware", "VirtualBox"]
