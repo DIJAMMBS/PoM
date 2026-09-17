@@ -18,7 +18,7 @@ Durante mi experiencia profesional he participado en proyectos para clientes del
 
 Además de mi experiencia corporativa, desarrollé de manera independiente nueve videojuegos para Android utilizando Unity y C#, participando en todo el ciclo de vida de los productos, desde el desarrollo hasta su publicación y mantenimiento.`,
     personalMessage: "Me gusta seguir aprendiendo y enfrentarme a retos que me permitan mejorar, crecer profesionalmente y ampliar mis conocimientos.",
-    cvDownloadUrl: "https://github.com/DIJAMMBS/PoM/blob/main/CV/CV.pdf", // Link de descarga del CV en PDF
+    cvDownloadUrl: "CV/CV.pdf", // Link de descarga del CV en PDF
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/mrchavezs/", // Link de LinkedIn
       github: "https://github.com/tu-usuario-placeholder", // Link de GitHub
@@ -230,10 +230,11 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
   ],
   skills: {
     lenguajes: ["Java", "C#", "C++", "JavaScript", "Kotlin", "COBOL", "JCL", "Python", "Shell Script"],
-    backendDev: ["Spring Boot", "Maven", "Nexus", "Git", "REST API", "Mockito", "Eclipse", "NetBeans", "Visual Studio", "Visual Studio Code", "Spring Tool Suite"],
+    backendDev: ["Spring Boot", "Maven", "Nexus", "Git", "REST API", "Mockito", "Eclipse", "NetBeans", "Visual Studio", "Visual Studio Code", "Spring Tool Suite", "PL/SQL", "ETL", "Pipeline", "Node.js",],
     mainframe: ["CICS", "JCL", "COBOL", "Control-M", "ESCWA", "XINFO", "IDZ", "Mainframe 390"],
-    sistemas: ["Linux", "UNIX", "Windows"],
-    tools: ["Cygwin", "MobaXterm", "ServiceNow", "Bruno"],
+    sistemas: ["Linux", "UNIX", "Windows", "MacOS"],
+    tools: ["Cygwin", "MobaXterm", "ServiceNow", "Bruno", "Postman", "AntiGravity", "Formsubmit"],
+    basesDeDatos: ["Oracle", "SQL Server", "SQL Developer", "MongoDB"],
     gameDev: ["Unity", "C#", "Android Studio", "Google Play Console", "Google Play Services", "Google AdMob"],
     creative3d: ["Blender", "SketchUp", "Photoshop", "Illustrator", "FL Studio", "Filmora"],
     virtualizacion: ["VMware", "VirtualBox"]
@@ -241,9 +242,9 @@ Además de mi experiencia corporativa, desarrollé de manera independiente nueve
   techStackSection: {
     backend: ["Java", "Spring Boot", "Maven", "REST", "Mockito"],
     mainframe: ["COBOL", "JCL", "CICS", "Control-M", "IDZ", "XINFO"],
-    automation: ["Shell Script", "Linux", "PL/SQL", "Cygwin", "MobaXterm"],
+    automation: ["Shell Script", "Linux", "PL/SQL", "Cygwin", "MobaXterm", "ETL", "Pipeline"],
     gameDev: ["Unity", "C#", "Android Studio", "Google Play", "Google Play Console", "Google Play Services", "Google AdMob"],
-    tools: ["Git", "Eclipse", "VS Code", "ServiceNow", "Bruno"],
+    tools: ["Git", "Eclipse", "VS Code", "ServiceNow", "Bruno", "Postman", "AntiGravity", "Formsubmit"],
     virtualization: ["VMware", "VirtualBox"],
     modeling3d: ["Blender", "Google SketchUp"],
     imageEditing: ["Photoshop", "Illustrator"]
